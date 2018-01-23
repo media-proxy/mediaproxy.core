@@ -1,0 +1,42 @@
+$def with (templatedata,path,filemeta)
+$var templatedata = templatedata
+
+$if 'title' in filemeta:
+    <h2 style="float: left;margin-right: 5px;">$filemeta['title']</h2>
+    
+$if 'year' in filemeta:
+    $if len(filemeta['year']) > 0:
+        <h4>($filemeta['year'])</h4><br>
+
+
+$if 'plakat' in filemeta:
+    <img alt="Embedded Image" src="data:image/png;base64,$filemeta['plakat']" height="70%" style="float: left; margin-right: 2%;"/> 
+    
+$if 'plot' in filemeta:
+    $filemeta['plot']
+    
+    
+$if 'rating' in filemeta:
+    $filemeta['rating']
+    
+$if 'set' in filemeta:
+    $filemeta['set']
+
+
+
+<br><br>
+
+<a href='/download$path'>
+<button>$_('Download')</button>
+</a>
+
+<br><br>
+$for entry in filemeta:
+    $if filemeta[entry]:
+        $if entry in ['thumb','plakat']:
+            $continue
+        $entry <br>
+        $filemeta[entry]<br><br>
+
+
+

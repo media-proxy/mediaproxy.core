@@ -1,0 +1,17 @@
+$def with (templatedata,folder,showlist)
+$var templatedata = templatedata
+<meta http-equiv="X-UA-Compatible" content="IE=10" >
+
+
+<style>
+ul.folderlist {
+    list-style-type: none;
+    width: 100%;
+}
+</style>
+
+<h1>$_('Movies')</h1>
+
+<br><br>
+$for entry in showlist:
+    <a href="/movies$folder$entry">$entry</a><br>

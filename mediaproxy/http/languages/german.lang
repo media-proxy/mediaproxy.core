@@ -1,0 +1,23 @@
+[meta]
+name=Deutsch
+
+[translations]
+Setup=Installation
+Install Method=Installations Methode
+Portable=Tragbar
+Local=Lokal
+Channels=Kanäle
+New Channel=Neuer Kanal
+Music=Musik
+Movies=Filme
+Name=Name
+Choose Channel Plugin=Wählen Sie ein Kanal Plugin
+Path=Pfad
+Choose=Übernehmen
+Error:=Fehler:
+Back=Zurück
+TV=TV
+Series=Serien
+Pictures=Bilder
+Download=Herunterladen
+No Content Found=Kein Inhalt gefunden

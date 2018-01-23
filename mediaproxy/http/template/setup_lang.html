@@ -1,0 +1,22 @@
+$def with (languages)
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=10" >
+
+<center>
+
+<h1>Setup</h1><BR>
+<form method="POST">
+
+<label>Languages<br><br>
+<select name="language" size="1"> 
+    
+$for lang in languages:
+    <option>$lang</option> 
+
+</select> 
+</label>
+<br><br>
+<button type="submit">Choose</button>
+</form>
+</center>

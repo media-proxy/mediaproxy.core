@@ -1,0 +1,47 @@
+$def with (templatedata,cplugins,splugins,values)
+$var templatedata = templatedata
+
+
+
+<h1>$_('New Channel')</h1><BR>
+<form method="POST">
+    
+<label>$_('Name')<br><br>
+
+<input name="name" type="text"
+$if values:
+    value="$values['name']"
+><br><br>
+
+<label>$_('Path')<br><br>
+<input name="path"  type="text"
+$if values:
+    value="$values['path']"
+><br><br>
+
+
+<label>$_('Choose Channel Plugin')<br><br>
+<select name="cplugin" size="1"
+$if values:
+    value="$values['cplugin']"
+> 
+$for p in cplugins:
+    <option value="$p['id']">$_(p['name'])</option> 
+
+</select> 
+<br><br>
+<label>$_('Choose Scraper')<br><br>
+<select name="splugin" size="1"
+$if values:
+    value="$values['splugin']"
+> 
+$for s in splugins:
+    <option value="$s['id']">$_(s['name'])</option> 
+
+</select> 
+
+</label>
+<br><br>
+<button type="submit">$_('Choose')</button>
+</form>
+
